@@ -6,6 +6,7 @@ Covid-map is a project to see on a map how many people have been infected by pro
 
  - npm i
  - npm start (dev mode)
+ - npm run mock (start mock server on http://localhost:9999/data)
 
 # ToDos:
 
