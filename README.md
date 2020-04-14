@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Covid-mao is a project to see on a map how many people have been infected by province in Italy from covid-19. It is based on React-Leaflet.
+Covid-map is a project to see on a map how many people have been infected by province in Italy from covid-19. It is based on react-leaflet.
 
  - npm i
  - npm start (dev mode)
