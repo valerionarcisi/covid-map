@@ -1,8 +1,8 @@
 import React from 'react';
-import { Provider } from 'react-redux '
+import { Provider } from 'react-redux'
 import App from './app/App';
 
-function CovidMapApp() {
+function CovidMapApp({ store }) {
   return (
     <React.StrictMode>
       <Provider store={store}>
