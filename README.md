@@ -8,7 +8,7 @@ Covid-map is a project to see on a map how many people have been infected by pro
  - npm start (dev mode)
  - npm run mock (start mock server on http://localhost:9999/data)
 
-# ToDos:
+# ToDo:
 
 - [x] Create Infrastructure
 - [ ] Api Call  (https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-province-latest.json)
