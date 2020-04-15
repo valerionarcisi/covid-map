@@ -11,9 +11,7 @@ const useStyles = createUseStyles({
 
 function App() {
   const classes = useStyles();
-  return (
-    <div className={classes.myDiv} />
-  );
+  return <div className={classes.myDiv} />;
 }
 
 export default App;

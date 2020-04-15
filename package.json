@@ -6,7 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "husky": "^4.2.5",
     "json-server": "^0.16.1",
+    "pretty-quick": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -18,9 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "npx eslint src/app/",
-    "lint:fix": "npx eslint src/app/ --fix",
-    "mock": "npx nodemon ./mock/server.js"
+    "mock": "npx nodemon ./mock/server.js",
+    "reset": "rm -rf node_modules && rm -rf package-lock.json && npm i",
+    "format": "prettier --write \"src/**/*\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,10 +40,12 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^3.0.0",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
