@@ -11,7 +11,7 @@ Covid-map is a project to see on a map how many people have been infected by pro
 # ToDo:
 
 - [x] Create Infrastructure
-- [ ] Api Call  (https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-province-latest.json)
+- [x] Api Call  (https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-province-latest.json)
 - [ ] Create react context for map
 - [ ] Create Map
 - [ ] Create Circle Polygon || Pointer
