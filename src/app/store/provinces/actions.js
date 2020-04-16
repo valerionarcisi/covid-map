@@ -1,7 +1,5 @@
-import createAction from '../../utils/actionCreators';
-import {
-  SET_PROVS, SET_PROVS_ERROR, SET_PROVS_LOADING
-} from './types';
+import createAction from '../utils/actionCreators';
+import { SET_PROVS, SET_PROVS_ERROR, SET_PROVS_LOADING } from './types';
 
 export function setProvs(data) {
   return createAction(SET_PROVS, data);
@@ -14,7 +12,6 @@ export function setProvsError(message) {
 export function setProvsLoading(status) {
   return createAction(SET_PROVS_LOADING, status);
 }
-
 
 export const makeProvsActions = (dispatch) => ({
   doSetProvs(data) {

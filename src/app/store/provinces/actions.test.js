@@ -1,8 +1,4 @@
-import {
-  SET_PROVS,
-  SET_PROVS_ERROR,
-  SET_PROVS_LOADING,
-} from './types';
+import { SET_PROVS, SET_PROVS_ERROR, SET_PROVS_LOADING } from './types';
 import { setProvs, setProvsError, setProvsLoading } from './actions';
 
 describe('#Redux #setProvs #Actions', () => {
@@ -20,8 +16,8 @@ describe('#Redux #setProvs #Actions', () => {
   const status = true;
 
   test.each`
-    name                   | actionCreator        | type                   | payload
-    ${'setProvs'}    | ${setProvs}    | ${SET_PROVS}         | ${data}
+    name                 | actionCreator      | type                 | payload
+    ${'setProvs'}        | ${setProvs}        | ${SET_PROVS}         | ${data}
     ${'setProvsError'}   | ${setProvsError}   | ${SET_PROVS_ERROR}   | ${message}
     ${'setProvsLoading'} | ${setProvsLoading} | ${SET_PROVS_LOADING} | ${status}
   `('$name', ({ actionCreator, type, payload }) => {

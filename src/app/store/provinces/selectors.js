@@ -5,7 +5,6 @@
 
 // const { getData, getError, getIsLoading } = makeSelectors(STATE_KEY);
 
-
 // export const getAllSlides = createSelector(
 //   getData,
 //   (res) => (res ? values(res) : []),

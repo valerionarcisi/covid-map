@@ -1,8 +1,4 @@
-import {
-  SET_PROVS,
-  SET_PROVS_ERROR,
-  SET_PROVS_LOADING,
-} from './types';
+import { SET_PROVS, SET_PROVS_ERROR, SET_PROVS_LOADING } from './types';
 
 import {
   createReducer,
@@ -10,8 +6,7 @@ import {
   setDataReducer,
   setErrorReducer,
   setLoadingReducer,
-} from '../../utils';
-
+} from './../utils';
 
 export default createReducer(initialState, {
   [SET_PROVS]: setDataReducer,
