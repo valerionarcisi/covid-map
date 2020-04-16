@@ -18,7 +18,6 @@ export function makeGetIsLoading(entity) {
   };
 }
 
-
 export default function makeSelectors(entity) {
   return {
     getData: makeGetData(entity),

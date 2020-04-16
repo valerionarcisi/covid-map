@@ -1,9 +1,5 @@
 import initialState from './initialState';
-import {
-  setDataReducer,
-  setErrorReducer,
-  setLoadingReducer,
-} from './setState';
+import { setDataReducer, setErrorReducer, setLoadingReducer } from './setState';
 
 describe('#Redux #Utils #setState', () => {
   const errorAction = {
@@ -26,53 +22,50 @@ describe('#Redux #Utils #setState', () => {
     expect(state).toMatchObject(expectedState);
   });
 
-
   it('#setDataReducer should update data', () => {
     const initialState = {
       data: {
-        'data1': {
+        data1: {
           name: 'data 1',
           version: 1,
         },
-        'data3': {
+        data3: {
           name: 'data 3',
-          version: 1
-        }
-      }
-    }
+          version: 1,
+        },
+      },
+    };
 
     const payload = {
-      'data2': {
+      data2: {
         name: 'data 2',
         version: 1,
       },
-      'data3': {
+      data3: {
         name: 'data 3',
         version: 2,
       },
-    }
+    };
 
     const newState = setDataReducer(initialState, { payload });
 
     const expectedState = {
       data: {
-        'data1': {
+        data1: {
           name: 'data 1',
           version: 1,
         },
-        'data2': {
+        data2: {
           name: 'data 2',
           version: 1,
         },
-        'data3': {
+        data3: {
           name: 'data 3',
           version: 2,
         },
-      }
-    }
+      },
+    };
 
     expect(newState).toEqual(expectedState);
-
   });
-
 });
