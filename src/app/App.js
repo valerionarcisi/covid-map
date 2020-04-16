@@ -1,5 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import useFetchProvsAndSaveToRedux from './api/useFetchProvsAndSaveToRedux';
 
 const useStyles = createUseStyles({
   myDiv: {
@@ -11,6 +12,9 @@ const useStyles = createUseStyles({
 
 function App() {
   const classes = useStyles();
+  const doFetchProvsAndSaveToRedux = useFetchProvsAndSaveToRedux();
+  doFetchProvsAndSaveToRedux();
+
   return <div className={classes.myDiv} />;
 }
 
