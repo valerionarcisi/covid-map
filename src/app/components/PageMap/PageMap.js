@@ -1,8 +1,10 @@
 import React from 'react';
+import { Popup } from 'react-leaflet';
 import useFetchProvsAndSaveToRedux from '../../api/useFetchProvsAndSaveToRedux';
 import PageLayout from '../atoms/PageLayout';
 import Map from '../atoms/Map';
-import BaseTileLayer from './../atoms/BaseTileLayer'
+import TileLayer from '../atoms/TileLayer'
+import CircleMarker from '../atoms/CircleMarker'
 
 const CONFIGS_MAP = {
   baseLayers: [
@@ -26,7 +28,12 @@ function PageMap() {
 
   return <PageLayout>
     <Map center={CONFIGS_MAP.center} zoom={CONFIGS_MAP.zoom} zoomControl={CONFIGS_MAP.zoomControl} attributionControl={CONFIGS_MAP.attributionControl}>
-      <BaseTileLayer baseTileLayers={CONFIGS_MAP.baseLayers}/>
+      <TileLayer baseTileLayers={CONFIGS_MAP.baseLayers} />
+      <CircleMarker center={CONFIGS_MAP.center} >
+        <Popup>
+          FooBar!!
+          </Popup>
+      </CircleMarker>
     </Map>
   </PageLayout>
 
