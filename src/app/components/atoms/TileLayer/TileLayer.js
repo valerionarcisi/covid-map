@@ -1,12 +1,12 @@
 import React from 'react';
 import pt from 'prop-types';
-import { LayersControl, TileLayer } from 'react-leaflet';
+import { LayersControl, TileLayer as LfTileLayer } from 'react-leaflet';
 
 /**
  * @param {Array} baseTileLayer
  * @param {...Object} props - passthrough of leaflet baseTileLayer component props
  */
-function BaseTileLayer({ baseTileLayers, ...props }) {
+function TileLayer({ baseTileLayers, ...props }) {
   return (
     <LayersControl {...props}>
       {baseTileLayers.map((layer) => {
@@ -15,7 +15,7 @@ function BaseTileLayer({ baseTileLayers, ...props }) {
         } = layer;
         return (
           <LayersControl.BaseLayer name={name} checked={!!selected} key={name}>
-            <TileLayer url={url} {...other} />
+            <LfTileLayer url={url} {...other} />
           </LayersControl.BaseLayer>
         );
       })}
@@ -23,8 +23,8 @@ function BaseTileLayer({ baseTileLayers, ...props }) {
   );
 }
 
-BaseTileLayer.propTypes = {
+TileLayer.propTypes = {
   baseTileLayers: pt.array.isRequired,
 };
 
-export default BaseTileLayer;
+export default TileLayer;
