@@ -10,7 +10,7 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
 server.get('/dpc-covid19-ita-province-latest.json', (req, res) => {
-  res.jsonp(db);
+  res.jsonp(db.data);
 });
 
 server.use(router);
