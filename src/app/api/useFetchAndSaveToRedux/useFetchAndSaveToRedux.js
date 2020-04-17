@@ -30,7 +30,6 @@ export default function makeUseFetchAndSaveToRedux({
     useEffect(() => {
       switch (status) {
         case null:
-          setIsLoading(false);
           break;
         case ERROR:
           setError(exception);
@@ -41,7 +40,6 @@ export default function makeUseFetchAndSaveToRedux({
           break;
         case SUCCESS:
           setData(response);
-          setError(null);
           setIsLoading(false);
           break;
         default:
