@@ -11,14 +11,9 @@ const useStyles = createUseStyles({
 });
 
 function PageLayout({ children, className, ...others }) {
-
   const classes = useStyles();
 
-  return (
-    <div className={clsx(classes.root, className)}>
-      {children}
-    </div>
-  );
+  return <div className={clsx(classes.root, className)}>{children}</div>;
 }
 
 PageLayout.propTypes = {

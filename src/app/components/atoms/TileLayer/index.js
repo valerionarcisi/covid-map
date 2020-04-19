@@ -1,1 +1,1 @@
-export { default } from './TileLayer'
+export { default } from './TileLayer';

@@ -14,11 +14,11 @@ function CircleMarker({ center, ...others }) {
 
 CircleMarker.propTypes = {
   center: pt.array.isRequired,
-  radius: pt.number
+  radius: pt.number,
 };
 
 CircleMarker.defaultPros = {
-  radius: 30
+  radius: 30,
 };
 
-export default CircleMarker
+export default CircleMarker;
