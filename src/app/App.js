@@ -1,8 +1,8 @@
 import React from 'react';
-import PageMap from './components/PageMap';
+import PageProvinces from './components/provinces/PageProvinces';
 
 function App() {
-  return <PageMap/>
+  return <PageProvinces />;
 }
 
 export default App;
