@@ -10,9 +10,7 @@ function TileLayer({ baseTileLayers, ...props }) {
   return (
     <LayersControl {...props}>
       {baseTileLayers.map((layer) => {
-        const {
-          url, selected, name, ...other
-        } = layer;
+        const { url, selected, name, ...other } = layer;
         return (
           <LayersControl.BaseLayer name={name} checked={!!selected} key={name}>
             <LfTileLayer url={url} {...other} />

@@ -1,1 +1,1 @@
-export { default } from './CircleMarker'
+export { default } from './CircleMarker';
