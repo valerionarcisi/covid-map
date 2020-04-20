@@ -15,4 +15,4 @@ Covid-map is a project to see on a map how many people have been infected by pro
 - [x] Create Map
 - [x] Create Circle Polygon || Pointer
 - [x] Attach data to components
-- [ ] Create Popup
+- [x] Create Popup
