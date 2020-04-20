@@ -12,7 +12,8 @@ const CONFIGS_MAP = {
     },
   ],
   zoom: 7,
-  center: [41.902782, 12.496366],
+  //CENTER OF MAP: BOLOGNA
+  center: [44.498955, 11.327591],
   zoomControl: false,
   attributionControl: false,
 };
