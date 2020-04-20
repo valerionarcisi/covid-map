@@ -1,1 +1,1 @@
-export { default } from './ListProvinces'
+export { default } from './ListProvinces';
