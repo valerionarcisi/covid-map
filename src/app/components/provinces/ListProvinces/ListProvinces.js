@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { getAllProvinces } from './../../../store/provinces/selectors';
+import { getValidProvinces } from './../../../store/provinces/selectors';
 import Province from './../Province';
 
 function ListProvinces() {
-  const data = useSelector(getAllProvinces);
+  const data = useSelector(getValidProvinces);
   return data.map(
     ({
       denominazione_provincia,
