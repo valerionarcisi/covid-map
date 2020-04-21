@@ -3,8 +3,14 @@ import pt from 'prop-types';
 import CircleMarker from '../../atoms/CircleMarker';
 import PopupProvinces from './../PopupProvinces';
 
+/**
+ *
+ * @param {Number} num - this is base number to create a radius for CircleMarker
+ *
+ * @returns {Number} if 2 <= num <= 500 return 5, if 501 <= num <= 5000 return 10,  5001 <= num <= 10000 return 15, 10001 <= num return 20
+ */
 export const radius = (num) => {
-  if (typeof num === 'undefined') {
+  if (typeof num !== 'number') {
     return 10;
   }
 

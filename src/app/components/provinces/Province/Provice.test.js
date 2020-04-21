@@ -1,8 +1,12 @@
 import { radius } from './Province';
 
 describe('#radius', () => {
-  it('#undefined', () => {
+
+  it('are not number', () => {
     expect(radius()).toEqual(10);
+    expect(radius('')).toEqual(10);
+    expect(radius('qweqwwqw')).toEqual(10);
+    expect(radius('3')).toEqual(10);
   });
 
   it('#500', () => {
