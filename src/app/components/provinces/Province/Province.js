@@ -10,7 +10,7 @@ import PopupProvinces from './../PopupProvinces';
  * @returns {Number} if 2 <= num <= 500 return 5, if 501 <= num <= 5000 return 10,  5001 <= num <= 10000 return 15, 10001 <= num return 20
  */
 export const radius = (num) => {
-  if (typeof num !== 'number') {
+  if (typeof num !== 'number' || isNaN(num)) {
     return 10;
   }
 
