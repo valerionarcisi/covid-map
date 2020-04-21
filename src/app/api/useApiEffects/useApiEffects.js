@@ -2,6 +2,22 @@ import { useReducer, useEffect } from 'react';
 import reducer, { initialState } from './reducer';
 import { fetching, success, error } from './actions';
 
+
+/**
+ * @description this is a little hook to handle api call statement.
+ *
+ * @param {*} req - instnace of request
+ * @param {String} endpoint - endpoint to call
+ * @param {Object} object - {verb, payload} of call
+ *
+ * @return {Object} state - {status: null,
+ * response: null,
+ * exception: null,
+ * }
+ *
+ */
+
+
 const useApiEffects = (
   req,
   endpoint,
