@@ -1,7 +1,7 @@
 import React from 'react';
 import pt from 'prop-types';
-import CircleMarker from '../../atoms/CircleMarker';
-import PopupProvinces from './../PopupProvinces';
+import CircleMarker from './../../components/CircleMarker';
+import PopupProvinces from './PopupProvinces';
 
 /**
  *
@@ -43,7 +43,7 @@ export const radius = (num) => {
  * @param {Number} infected - infected in province
  */
 
-function Province({ center, data }) {
+function ItemProvince({ center, data }) {
   const { city, region, relevatedAt, infected } = data;
   return (
     <CircleMarker center={center} radius={radius(infected)}>
@@ -57,7 +57,7 @@ function Province({ center, data }) {
   );
 }
 
-Province.propTypes = {
+ItemProvince.propTypes = {
   center: pt.array.isRequired,
   data: pt.shape({
     region: pt.string.isRequired,
@@ -67,4 +67,4 @@ Province.propTypes = {
   }).isRequired,
 };
 
-export default Province;
+export default ItemProvince;

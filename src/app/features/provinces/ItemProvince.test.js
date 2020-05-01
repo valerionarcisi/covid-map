@@ -1,4 +1,4 @@
-import { radius } from './Province';
+import { radius } from './ItemProvince';
 
 describe('#radius', () => {
 

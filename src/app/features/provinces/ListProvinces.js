@@ -1,10 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { getValidProvinces } from './../../../store/provinces/selectors';
-import Province from './../Province';
+import ItemProvince from './ItemProvince';
 
 function ListProvinces() {
-  const data = useSelector(getValidProvinces);
+  const data = []
   return data.map(
     ({
       denominazione_provincia,
@@ -15,7 +13,7 @@ function ListProvinces() {
       long,
       totale_casi,
     }) => (
-      <Province
+      <ItemProvince
         key={codice_provincia}
         center={[lat, long]}
         data={{

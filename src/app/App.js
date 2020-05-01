@@ -1,5 +1,5 @@
 import React from 'react';
-import PageProvinces from './components/provinces/PageProvinces';
+import PageProvinces from './features/provinces/PageProvince';
 
 function App() {
   return <PageProvinces />;

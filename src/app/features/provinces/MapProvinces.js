@@ -1,7 +1,7 @@
 import React from 'react';
 import pt from 'prop-types';
-import Map from '../../atoms/Map';
-import TileLayer from '../../atoms/TileLayer';
+import Map from '../../components/Map';
+import TileLayer from '../../components/TileLayer';
 
 const CONFIGS_MAP = {
   baseLayers: [
