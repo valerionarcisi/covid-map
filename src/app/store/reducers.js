@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-// import proviceReducer from './../features/provinces/SliceProvince'
-// export default combineReducers({
-//   provinces: proviceReducer
-// })
-const rootReducer = combineReducers({})
+import proviceReducer from './../features/provinces/SliceProvince'
+
+const rootReducer = combineReducers({
+  provinces: proviceReducer
+})
 
 export default rootReducer
