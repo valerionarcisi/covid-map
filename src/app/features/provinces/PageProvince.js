@@ -4,7 +4,6 @@ import MapProvinces from './MapProvinces';
 import ListProvinces from './ListProvinces';
 
 function PageProvinces({ children }) {
-
   return (
     <PageLayout>
       <MapProvinces>
