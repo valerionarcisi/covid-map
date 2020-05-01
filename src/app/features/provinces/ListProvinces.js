@@ -8,7 +8,7 @@ function ListProvinces() {
   const dispatch = useDispatch()
 
   const { provincesLoading, provincesError, provinces } = useSelector(
-    (state: RootState) => {
+    (state) => {
       return {
         provincesLoading: state.provinces.loading,
         provincesError: state.provinces.error,
