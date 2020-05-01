@@ -16,8 +16,7 @@ const provinceSlice = createSlice({
       state.error = null
     },
     getProvincesSuccess(state, action) {
-      const { data } = action.payload
-      state.data = data
+      state.data = action.payload
       state.loading = false
       state.error = null
     },
@@ -37,6 +36,7 @@ export const {
 export default provinceSlice.reducer
 
 export const fetchProvinces = () => async dispatch => {
+
   try {
     dispatch(getProvincesStart())
     const result = await getProvince()
