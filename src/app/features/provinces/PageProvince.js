@@ -16,7 +16,7 @@ function PageProvinces({ children }) {
   return (
     <PageLayout>
       <MapProvinces>
-        {!provincesLoading && !provincesError ? <ListProvinces provinces={provinces} /> : null}
+        {!provincesLoading && !provincesError ? <ListProvinces provinces={provinces} /> : 'loading...'}
       </MapProvinces>
     </PageLayout>
   );
