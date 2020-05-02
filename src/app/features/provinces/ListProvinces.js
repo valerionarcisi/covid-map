@@ -1,29 +1,8 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux'
+import React from 'react';
+import pt from 'prop-types';
 import ItemProvince from './ItemProvince';
-import { fetchProvinces } from './SliceProvince'
 
-
-function ListProvinces() {
-  const dispatch = useDispatch()
-
-  const { provincesLoading, provincesError, provinces } = useSelector(
-    (state) => {
-      return {
-        provincesLoading: state.provinces.loading,
-        provincesError: state.provinces.error,
-        provinces: state.provinces.data
-      }
-    },
-    shallowEqual
-  )
-
-  console.log(provincesLoading, provincesError)
-
-  useEffect(() => {
-      dispatch(fetchProvinces())
-  }, [dispatch])
-
+function ListProvinces({provinces}) {
   return provinces.map(
     ({
       denominazione_provincia,
@@ -47,5 +26,9 @@ function ListProvinces() {
       )
   );
 }
+
+ListProvinces.propTypes = {
+  provinces: pt.array.isRequired,
+};
 
 export default ListProvinces;
