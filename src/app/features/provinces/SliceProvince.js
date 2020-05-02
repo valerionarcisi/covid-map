@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { useSelector, shallowEqual } from 'react-redux'
 import getProvince from '../../api/getProvince'
 
 const initialState = {
@@ -46,3 +47,16 @@ export const fetchProvinces = () => async dispatch => {
   }
 }
 
+export function useProvincesSelectors() {
+  const { provincesLoading, provincesError, provinces } = useSelector(
+    (state) => {
+      return {
+        provincesLoading: state.provinces.loading,
+        provincesError: state.provinces.error,
+        provinces: state.provinces.data
+      }
+    },
+    shallowEqual
+  )
+  return { provinces, provincesLoading, provincesError }
+}
